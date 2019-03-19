@@ -1,4 +1,4 @@
-package com.tacticalfitnessmexicali.computacionmovil;
+package com.computacionmovil.computacionmovil;
 
 import org.junit.Test;
 

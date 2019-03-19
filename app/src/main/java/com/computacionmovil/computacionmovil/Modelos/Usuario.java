@@ -1,4 +1,4 @@
-package com.tacticalfitnessmexicali.computacionmovil.Modelos;
+package com.computacionmovil.computacionmovil.Modelos;
 
 import android.content.Context;
 

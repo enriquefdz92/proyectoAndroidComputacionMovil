@@ -1,4 +1,4 @@
-package com.tacticalfitnessmexicali.computacionmovil.Adaptadores;
+package com.computacionmovil.computacionmovil.Adaptadores;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

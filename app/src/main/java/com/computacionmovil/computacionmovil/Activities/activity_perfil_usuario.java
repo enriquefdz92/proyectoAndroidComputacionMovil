@@ -1,4 +1,4 @@
-package com.tacticalfitnessmexicali.computacionmovil.Activities;
+package com.computacionmovil.computacionmovil.Activities;
 
 import android.app.Activity;
 import android.content.DialogInterface;
@@ -13,8 +13,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.tacticalfitnessmexicali.computacionmovil.Modelos.Usuario;
-import com.tacticalfitnessmexicali.computacionmovil.R;
+import com.computacionmovil.computacionmovil.Modelos.Usuario;
+import com.computacionmovil.computacionmovil.R;
 
 public class activity_perfil_usuario extends AppCompatActivity {
 private Usuario selectedUser ;

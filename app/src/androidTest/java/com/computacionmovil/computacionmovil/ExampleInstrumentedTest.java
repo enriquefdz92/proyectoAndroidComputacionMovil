@@ -1,4 +1,4 @@
-package com.tacticalfitnessmexicali.computacionmovil;
+package com.computacionmovil.computacionmovil;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.tacticalfitnessmexicali.computacionmovil", appContext.getPackageName());
+        assertEquals("com.computacionmovil.computacionmovil", appContext.getPackageName());
     }
 }

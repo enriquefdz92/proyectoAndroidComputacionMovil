@@ -1,4 +1,4 @@
-package com.tacticalfitnessmexicali.computacionmovil.Activities;
+package com.computacionmovil.computacionmovil.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,11 +10,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
-import com.tacticalfitnessmexicali.computacionmovil.Adaptadores.ListAdapter;
-import com.tacticalfitnessmexicali.computacionmovil.Adaptadores.RecyclerItemClickListener;
-import com.tacticalfitnessmexicali.computacionmovil.Modelos.DataModel;
-import com.tacticalfitnessmexicali.computacionmovil.Modelos.Usuario;
-import com.tacticalfitnessmexicali.computacionmovil.R;
+import com.computacionmovil.computacionmovil.Adaptadores.ListAdapter;
+import com.computacionmovil.computacionmovil.Adaptadores.RecyclerItemClickListener;
+import com.computacionmovil.computacionmovil.Modelos.DataModel;
+import com.computacionmovil.computacionmovil.Modelos.Usuario;
+import com.computacionmovil.computacionmovil.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;

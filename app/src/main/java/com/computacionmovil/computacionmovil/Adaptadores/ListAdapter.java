@@ -1,4 +1,4 @@
-package com.tacticalfitnessmexicali.computacionmovil.Adaptadores;
+package com.computacionmovil.computacionmovil.Adaptadores;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -8,8 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.tacticalfitnessmexicali.computacionmovil.Modelos.Usuario;
-import com.tacticalfitnessmexicali.computacionmovil.R;
+import com.computacionmovil.computacionmovil.Modelos.Usuario;
+import com.computacionmovil.computacionmovil.R;
 
 import java.util.ArrayList;
 import java.util.Collection;

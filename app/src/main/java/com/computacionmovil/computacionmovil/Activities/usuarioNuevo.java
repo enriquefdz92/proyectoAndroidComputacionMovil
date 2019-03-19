@@ -1,4 +1,4 @@
-package com.tacticalfitnessmexicali.computacionmovil.Activities;
+package com.computacionmovil.computacionmovil.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,9 +8,9 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.tacticalfitnessmexicali.computacionmovil.Activities.MainActivity;
-import com.tacticalfitnessmexicali.computacionmovil.Modelos.Usuario;
-import com.tacticalfitnessmexicali.computacionmovil.R;
+import com.computacionmovil.computacionmovil.Activities.MainActivity;
+import com.computacionmovil.computacionmovil.Modelos.Usuario;
+import com.computacionmovil.computacionmovil.R;
 
 import org.json.JSONException;
 
