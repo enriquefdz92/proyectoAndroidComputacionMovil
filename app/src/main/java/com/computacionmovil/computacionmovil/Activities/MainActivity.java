@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.TextView;
 
@@ -29,12 +31,13 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     ArrayList<Usuario> usuarioArrayList;
     private ListAdapter listAdapter;
-
+    private TextView txtBusqueda;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
+         txtBusqueda = findViewById(R.id.buscartxt);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -56,6 +59,22 @@ public class MainActivity extends AppCompatActivity {
                     }
                 })
         );
+        txtBusqueda.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void afterTextChanged(Editable s) {}
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start,
+                                          int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start,
+                                      int before, int count) {
+              UpdateList();
+            }
+        });
        UpdateList();
     }
 
@@ -75,11 +94,24 @@ public class MainActivity extends AppCompatActivity {
                 return n1.compareTo(n2);
             }
         });
-    listAdapter = new ListAdapter(this,usuarioArrayList);
+      ArrayList<Usuario> tempListForAdapter = new ArrayList<>();
+      if(txtBusqueda.getText().toString().trim()!=""){
+          for(int i = 0; i < usuarioArrayList.size(); i++){
+              String nombreCompleto = usuarioArrayList.get(i).getNombre() +" " + usuarioArrayList.get(i).getApellido();
+              if(nombreCompleto.toUpperCase().contains(txtBusqueda.getText().toString().toUpperCase())){
+                  tempListForAdapter.add(usuarioArrayList.get(i));
+              }
+          }
+      }else{
+          tempListForAdapter=usuarioArrayList;
+      }
+
+
+    listAdapter = new ListAdapter(this,tempListForAdapter);
     recyclerView.setAdapter(listAdapter);
     recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false));
         TextView txt = (TextView)findViewById(R.id.lblnousers);
-    if(recyclerView.getAdapter().getItemCount()==0){
+    if(recyclerView.getAdapter().getItemCount()==0 && txtBusqueda.getText().toString().trim().length()==0){
         txt.setVisibility(View.VISIBLE);
         recyclerView.setVisibility(View.GONE);
     }else{
