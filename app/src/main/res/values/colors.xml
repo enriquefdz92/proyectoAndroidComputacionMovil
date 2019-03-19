@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#c0ccdc</color>
+    <color name="colorPrimaryDark">#8091a3</color>
+    <color name="colorAccent">#c0ccdc</color>
+    <color name="navigationBarColor">#1f2c3d</color>
+    <color name="addbutton">#3b4859</color>
+    <color name="colorDivisorCardview">#f3f3f3</color>
+    <color name="colorCardViewText">#717171</color>
+    <color name="greenbtn">#60a85f</color>
+    <color name="eliminarBtb">#dc4849</color>
+
+</resources>

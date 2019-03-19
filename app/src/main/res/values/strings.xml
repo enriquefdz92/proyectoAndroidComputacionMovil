@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Computación Movíl</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_usuario_nuevo">usuarioNuevo</string>
+    <string name="alertBorrarUsuarioMensaje">Estas seguro que deseas borrar el contacto?</string>
+    <string name="alertBorrarUsuarioTitulo">Borrar Contacto</string>
+    <string name="si">Si</string>
+    <string name="no">No</string>
+    <string name="usuarioborrado">Contacto Borrado</string>
+    <string name="usuarioGuardado">Contacto Guardado</string>
+    <string name="agregaunusuario">No hay contactos guardados</string>
+
+</resources>
