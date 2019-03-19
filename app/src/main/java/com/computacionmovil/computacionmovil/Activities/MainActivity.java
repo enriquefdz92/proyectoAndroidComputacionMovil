@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.computacionmovil.computacionmovil.Adaptadores.ListAdapter;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     ArrayList<Usuario> usuarioArrayList;
     private ListAdapter listAdapter;
+    private Button clearbutton;
     private TextView txtBusqueda;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
          txtBusqueda = findViewById(R.id.buscartxt);
+         clearbutton = findViewById(R.id.clearbutton);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -72,6 +75,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start,
                                       int before, int count) {
+                if(txtBusqueda.getText().toString().trim().isEmpty()){
+                    clearbutton.setVisibility(View.GONE);
+                }else{
+                    clearbutton.setVisibility(View.VISIBLE);
+                }
               UpdateList();
             }
         });
@@ -105,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
       }else{
           tempListForAdapter=usuarioArrayList;
       }
-
+usuarioArrayList=tempListForAdapter;
 
     listAdapter = new ListAdapter(this,tempListForAdapter);
     recyclerView.setAdapter(listAdapter);
@@ -123,7 +131,9 @@ public class MainActivity extends AppCompatActivity {
     private String getJsonListaUsuarios() {
         return DataModel.getData(this);
     }
-
+public void clearBuscador(View view){
+        txtBusqueda.setText("");
+}
 
 
     public ArrayList<Usuario> getInfo() {

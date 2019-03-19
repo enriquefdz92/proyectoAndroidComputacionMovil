@@ -108,7 +108,7 @@
         android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_contacto" />
+        app:srcCompat="@mipmap/newusericon" />
 
     <TextView
         android:id="@+id/textView2"

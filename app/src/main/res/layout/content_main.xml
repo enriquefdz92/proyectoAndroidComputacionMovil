@@ -23,15 +23,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/clearbutton"
+        style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:onClick="clearBuscador"
+        android:text="Clear"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/buscartxt"
+        app:layout_constraintEnd_toEndOf="@+id/buscartxt"
+        app:layout_constraintTop_toTopOf="@+id/buscartxt" />
+
     <TextView
         android:id="@+id/lblnousers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="45dp"
         android:text="@string/agregaunusuario"
         android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/recycler" />
+        app:layout_constraintTop_toTopOf="@+id/buscartxt" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler"
