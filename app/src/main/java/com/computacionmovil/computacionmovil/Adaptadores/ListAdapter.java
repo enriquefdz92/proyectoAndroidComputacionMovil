@@ -13,12 +13,14 @@ import com.computacionmovil.computacionmovil.R;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Random;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> {
 
     private LayoutInflater inflater;
     private ArrayList<Usuario> usuarioMArrayList;
-
+    int MpicSelector = 1;
+    int FpicSelector = 1;
     public ListAdapter(Context ctx, ArrayList<Usuario> usuarioMArrayList){
 
         inflater = LayoutInflater.from(ctx);
@@ -47,14 +49,40 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> 
 
         //Picasso.get().load(usuarioMArrayList.get(position).getImgURL()).into(holder.iv);
         if(usuarioMArrayList.get(position).isMale() == true){
-            holder.iv.setImageResource(R.mipmap.ic_male);
+            switch (MpicSelector){
+                case 1:
+                    holder.iv.setImageResource(R.mipmap.icon_male_1);
+                    break;
+                case 2:
+                    holder.iv.setImageResource(R.mipmap.icon_male_2);
+                    break;
+            }
+            MpicSelector =alternarPicture(MpicSelector);
         }else{
-            holder.iv.setImageResource(R.mipmap.ic_female);
+            switch (FpicSelector){
+                case 1:
+                    holder.iv.setImageResource(R.mipmap.icon_female_1);
+                    break;
+                case 2:
+                    holder.iv.setImageResource(R.mipmap.icon_female_2);
+                    break;
+            }
+            FpicSelector = alternarPicture(FpicSelector);
         }
 
         holder.name.setText(usuarioMArrayList.get(position).getNombre() + " " + usuarioMArrayList.get(position).getApellido());
 
     }
+    private static int alternarPicture(int min) {
+
+        if (min == 1) {
+            return 2;
+        }else{
+            return 1;
+        }
+
+    }
+
 
     @Override
     public int getItemCount() {
